@@ -12,24 +12,25 @@ IMAGE_MAX = 180
 IMAGE_OPACITY = 128  # 50%
 
 FONT_PATH = "RuneScape-Quill-8.ttf"
-FONT_SIZE = 20
+FONT_SIZE = 24
 FONT_COLOR = (255, 255, 255)
 
-TEXT_MAX_WIDTH = 180
+TEXT_MAX_WIDTH = 160
 LINE_SPACING = 4
 
 SHADOW_OFFSET = (1, 1)
 SHADOW_COLOR = (0, 0, 0, 120)
 
 CHECKMARK_PATH = "checkmark.png"
-CHECKMARK_SIZE = 100  # 100x100 centered
+CHECKMARK_SIZE = 50
 
+COMPLETED_BORDER_WIDTH = 20
+COMPLETED_BORDER_COLOR = (0x43, 0xA0, 0x47, 255)
+
+# Base folder names
 NORMAL_DIR = "tiles_normal"
-COMPLETED_DIR = "tiles_completed"
+NORMAL_COMPLETED_DIR = "tiles_normal_completed"
 # ─────────────────────────────────────────────────────────
-
-os.makedirs(NORMAL_DIR, exist_ok=True)
-os.makedirs(COMPLETED_DIR, exist_ok=True)
 
 font = ImageFont.truetype(FONT_PATH, FONT_SIZE)
 
@@ -39,19 +40,40 @@ MODIFIER_COLORS = {
     "awakened": (200,  40,  40),  # red
     "dormant":  ( 40, 170,  60),  # green
     "milked":   (255, 255, 255),  # white
-    "millked":  (255, 255, 255),  # typo support
+    "stackable":( 40, 120, 255),  # blue
 }
+
+def ensure_dir(path: str):
+    os.makedirs(path, exist_ok=True)
 
 def fetch_image(url):
     r = requests.get(url, timeout=15)
     r.raise_for_status()
     return Image.open(BytesIO(r.content)).convert("RGBA")
 
+def get_line_height(draw, font):
+    bbox = draw.textbbox((0, 0), "Ag", font=font)
+    return bbox[3] - bbox[1]
+
+def apply_opacity_keep_alpha(img: Image.Image, opacity_0_255: int) -> Image.Image:
+    """Keep existing transparency and multiply it by opacity_0_255/255."""
+    img = img.convert("RGBA")
+    r, g, b, a = img.split()
+    factor = opacity_0_255 / 255.0
+    a = a.point(lambda p: int(p * factor))
+    return Image.merge("RGBA", (r, g, b, a))
+
+def add_inner_border(canvas: Image.Image, width: int, color: tuple) -> Image.Image:
+    out = canvas.copy()
+    draw = ImageDraw.Draw(out)
+    for i in range(width):
+        draw.rectangle([i, i, CANVAS_SIZE - 1 - i, CANVAS_SIZE - 1 - i], outline=color)
+    return out
+
 def wrap_text(draw, text, font, max_width):
     words = text.split()
     lines = []
     current = ""
-
     for word in words:
         test = current + (" " if current else "") + word
         bbox = draw.textbbox((0, 0), test, font=font)
@@ -61,7 +83,6 @@ def wrap_text(draw, text, font, max_width):
             if current:
                 lines.append(current)
             current = word
-
     if current:
         lines.append(current)
     return lines
@@ -100,9 +121,9 @@ def make_background(modifier: str) -> Image.Image:
     mask = Image.new("L", (CANVAS_SIZE, CANVAS_SIZE), 0)
     mpix = mask.load()
 
-    # Glow feel knobs
-    gamma = 1.6      # higher = tighter center
-    intensity = 220  # alpha at center
+    # Glow feel knobs (your “stronger” settings)
+    gamma = 1.3
+    intensity = 245
 
     for y in range(CANVAS_SIZE):
         for x in range(CANVAS_SIZE):
@@ -115,7 +136,7 @@ def make_background(modifier: str) -> Image.Image:
     colored = Image.composite(glow, base_black, mask)
 
     # Blend back toward black so it stays "black square + glow"
-    colored = Image.blend(base_black, colored, 0.45)  # lower -> more subtle, higher -> stronger
+    colored = Image.blend(base_black, colored, 0.65)
     return colored
 
 def draw_centered_wrapped_text(canvas: Image.Image, text: str):
@@ -125,53 +146,44 @@ def draw_centered_wrapped_text(canvas: Image.Image, text: str):
         return
 
     lines = wrap_text(draw, text, font, TEXT_MAX_WIDTH)
+    line_height = get_line_height(draw, font)
 
-    line_sizes = []
-    for line in lines:
-        bbox = draw.textbbox((0, 0), line, font=font)
-        line_sizes.append((bbox[2] - bbox[0], bbox[3] - bbox[1]))
-
-    total_height = sum(h for _, h in line_sizes) + LINE_SPACING * (len(lines) - 1)
+    total_height = line_height * len(lines) + LINE_SPACING * (len(lines) - 1)
     y = (CANVAS_SIZE - total_height) // 2
 
-    for (line, (w, h)) in zip(lines, line_sizes):
+    for line in lines:
+        bbox = draw.textbbox((0, 0), line, font=font)
+        w = bbox[2] - bbox[0]
         x = (CANVAS_SIZE - w) // 2
 
-        # Faint shadow
-        draw.text(
-            (x + SHADOW_OFFSET[0], y + SHADOW_OFFSET[1]),
-            line,
-            font=font,
-            fill=SHADOW_COLOR
-        )
-        # Main
+        # Shadow
+        draw.text((x + SHADOW_OFFSET[0], y + SHADOW_OFFSET[1]), line, font=font, fill=SHADOW_COLOR)
+        # Main text
         draw.text((x, y), line, font=font, fill=FONT_COLOR)
-        y += h + LINE_SPACING
+
+        y += line_height + LINE_SPACING
 
 def load_checkmark():
     if not os.path.exists(CHECKMARK_PATH):
-        raise FileNotFoundError(
-            f"Missing {CHECKMARK_PATH}. Put a transparent PNG checkmark next to the script."
-        )
+        raise FileNotFoundError(f"Missing {CHECKMARK_PATH}. Put a transparent PNG checkmark next to the script.")
     cm = Image.open(CHECKMARK_PATH).convert("RGBA")
     cm = cm.resize((CHECKMARK_SIZE, CHECKMARK_SIZE), Image.LANCZOS)
     return cm
 
 def add_checkmark(canvas: Image.Image, checkmark: Image.Image) -> Image.Image:
     out = canvas.copy()
-    x = (CANVAS_SIZE - CHECKMARK_SIZE) // 2
-    y = (CANVAS_SIZE - CHECKMARK_SIZE) // 2
-    out.paste(checkmark, (x, y), checkmark)
+    padding = 10
+    out.paste(checkmark, (padding, padding), checkmark)
     return out
 
-def make_tile(row: dict) -> Image.Image:
+def make_tile(row: dict, modifier_override: str) -> Image.Image:
     # Background
-    canvas = make_background(row.get("modifier", ""))
+    canvas = make_background(modifier_override)
 
-    # Main icon (50% opacity)
-    img = fetch_image(row["image_url"])
+    # Main icon (50% opacity, preserving alpha)
+    img = fetch_image(row["image_url"]).convert("RGBA")
     img.thumbnail((IMAGE_MAX, IMAGE_MAX), Image.LANCZOS)
-    img.putalpha(IMAGE_OPACITY)
+    img = apply_opacity_keep_alpha(img, IMAGE_OPACITY)
 
     ix = (CANVAS_SIZE - img.width) // 2
     iy = (CANVAS_SIZE - img.height) // 2
@@ -182,13 +194,26 @@ def make_tile(row: dict) -> Image.Image:
 
     return canvas
 
+def save_variant(base_tile: Image.Image, filename: str, out_dir: str):
+    ensure_dir(out_dir)
+    out_path = os.path.join(out_dir, filename)
+    base_tile.convert("RGB").save(out_path, "PNG")
+
+def save_completed_variant(base_tile: Image.Image, filename: str, out_dir: str, checkmark: Image.Image):
+    ensure_dir(out_dir)
+    completed_tile = add_inner_border(base_tile, COMPLETED_BORDER_WIDTH, COMPLETED_BORDER_COLOR)
+    completed_tile = add_checkmark(completed_tile, checkmark)
+    out_path = os.path.join(out_dir, filename)
+    completed_tile.convert("RGB").save(out_path, "PNG")
+
 def main():
     checkmark = load_checkmark()
 
     with open("tiles.csv", newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
 
-        required = {"region_id", "region_name", "position_id", "modifier", "image_url", "text"}
+        # modifier removed from CSV on purpose
+        required = {"region_id", "region_name", "position_id", "image_url", "text"}
         missing = required - set(reader.fieldnames or [])
         if missing:
             raise ValueError(f"tiles.csv missing columns: {sorted(missing)}")
@@ -196,15 +221,21 @@ def main():
         for row in reader:
             filename = build_filename(row["region_id"], row["region_name"], row["position_id"])
 
-            base_tile = make_tile(row)
-            normal_path = os.path.join(NORMAL_DIR, filename)
-            base_tile.convert("RGB").save(normal_path, "PNG")
+            # 1) Normal
+            normal_tile = make_tile(row, modifier_override="")
+            save_variant(normal_tile, filename, NORMAL_DIR)
+            save_completed_variant(normal_tile, filename, NORMAL_COMPLETED_DIR, checkmark)
 
-            completed_tile = add_checkmark(base_tile, checkmark)
-            completed_path = os.path.join(COMPLETED_DIR, filename)
-            completed_tile.convert("RGB").save(completed_path, "PNG")
+            # 2) All modifier variants
+            for mod in MODIFIER_COLORS.keys():
+                mod_dir = f"tiles_{mod}"
+                mod_completed_dir = f"tiles_{mod}_completed"
 
-    print(f"✅ Done. Normal tiles: {NORMAL_DIR}/  Completed tiles: {COMPLETED_DIR}/")
+                mod_tile = make_tile(row, modifier_override=mod)
+                save_variant(mod_tile, filename, mod_dir)
+                save_completed_variant(mod_tile, filename, mod_completed_dir, checkmark)
+
+    print("✅ Done. Generated normal + all modifier variants (and completed variants).")
 
 if __name__ == "__main__":
     main()
