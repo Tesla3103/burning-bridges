@@ -1,0 +1,115 @@
+region_id,region_name,position_id,modifier,image_url,text
+1,Kandarin,1,,https://oldschool.runescape.wiki/images/thumb/Jar_of_dirt_detail.png/800px-Jar_of_dirt_detail.png?7bdc6,Get 2 Jars of dirt
+1,Kandarin,2,,https://oldschool.runescape.wiki/images/Zenyte_shard_detail.png?c5a63,Get 5 Zenyte shards
+1,Kandarin,3,,https://oldschool.runescape.wiki/images/thumb/Shaman_mask_detail.png/1280px-Shaman_mask_detail.png?c8823,Get a Shaman Mask
+1,Kandarin,4,,https://oldschool.runescape.wiki/images/Smoke_Devil_%28follower%29.png?3e74f,Get a Pet smoke devil
+1,Kandarin,5,,https://oldschool.runescape.wiki/images/thumb/Dragon_full_helm_detail.png/1280px-Dragon_full_helm_detail.png?6edab,Get a Dragon full helm... or 75 Chewed bones while trying!
+1,Kandarin,6,,https://oldschool.runescape.wiki/images/Saradomin_banner_detail.png?e4c06,Win an official Castle Wars game with 9 points
+1,Kandarin,7,,https://oldschool.runescape.wiki/images/thumb/Berserker_helm_detail.png/150px-Berserker_helm_detail.png?78ba5,Get 3 unique helms from High Gambles
+1,Kandarin,8,,https://oldschool.runescape.wiki/images/Captain_Daerkin.png?87c14,Get the Gnome goggles and Scarf
+1,Kandarin,9,,https://oldschool.runescape.wiki/images/thumb/Chompy_bird.png/250px-Chompy_bird.png?6d30f,"Murder 2,000 Chompies"
+2,Morytania,1,,https://oldschool.runescape.wiki/images/Rum_%28blue%29_detail.png?09836,Brew at least 20 bottles of run in an official TB game
+2,Morytania,2,,https://oldschool.runescape.wiki/images/thumb/Volatile_orb_detail.png/150px-Volatile_orb_detail.png?4cd7c,Get any Orb from Phosani's Nightmare
+2,Morytania,3,,https://oldschool.runescape.wiki/images/thumb/Monumental_chest_%28teammate%27s%2C_closed%29.png/280px-Monumental_chest_%28teammate%27s%2C_closed%29.png?86e6f,Get 5 purples in the Theatre of Blood
+2,Morytania,4,,https://oldschool.runescape.wiki/images/thumb/Chest_%28Barrows%29.png/1280px-Chest_%28Barrows%29.png?9aff2,Complete any two Barrows sets
+2,Morytania,5,,https://oldschool.runescape.wiki/images/thumb/Holy_ornament_kit_detail.png/150px-Holy_ornament_kit_detail.png?17b1d,Get a Holy ornament kit from ToB
+2,Morytania,6,,https://oldschool.runescape.wiki/images/Ring_of_endurance_%28uncharged%29_detail.png?1e9c7,Get a Ring of Endurance
+2,Morytania,7,,https://oldschool.runescape.wiki/images/Blood_shard_detail.png?2fbc7,Get 3 Blood shards
+2,Morytania,8,,https://oldschool.runescape.wiki/images/thumb/Noxious_halberd_detail.png/140px-Noxious_halberd_detail.png?fa0de,Get 3 pieces of the Noxious Halberd
+2,Morytania,9,,https://oldschool.runescape.wiki/images/Granite_armour_equipped.png?d827b,Granite Man can!
+3,Kourend,1,,https://oldschool.runescape.wiki/images/Oathplate_armour_equipped_male.png?0e07a,Get Oathplate chest or legs
+3,Kourend,2,,https://oldschool.runescape.wiki/images/thumb/Brimstone_ring_detail.png/130px-Brimstone_ring_detail.png?c1867,Get 3 pieces of the Brimstone ring
+3,Kourend,3,,https://oldschool.runescape.wiki/images/thumb/Tome_of_fire_detail.png/160px-Tome_of_fire_detail.png?b9bae,Get 350 Burnt pages
+3,Kourend,4,,https://oldschool.runescape.wiki/images/thumb/Metamorphic_dust_detail.png/150px-Metamorphic_dust_detail.png?d0e85,Get a Twisted kit or Metamorphic dust
+3,Kourend,5,,https://oldschool.runescape.wiki/images/thumb/Ancient_chest.png/1280px-Ancient_chest.png?7727b,Get 6 purples in the Chambers of Xeric
+3,Kourend,6,,https://oldschool.runescape.wiki/images/thumb/Golden_tench_detail.png/130px-Golden_tench_detail.png?27700,Catch a Golden tench
+3,Kourend,7,,https://oldschool.runescape.wiki/images/thumb/Sarachnis_cudgel_detail.png/1280px-Sarachnis_cudgel_detail.png?f9ce8,Get 3 Sarachnis cudgels
+3,Kourend,8,,https://oldschool.runescape.wiki/images/Ancient_shard_detail.png?531d1,Get 50 Ancient shards (no Skotizo)
+3,Kourend,9,,https://oldschool.runescape.wiki/images/thumb/Mask_of_ranul_detail.png/150px-Mask_of_ranul_detail.png?4f67e,Get a Mask of Ranul
+4,Asgarnia,1,,https://oldschool.runescape.wiki/images/Siren%27s_staff_detail.png?b8fed,Get a Siren staff
+4,Asgarnia,2,,https://oldschool.runescape.wiki/images/thumb/Nex.png/1024px-Nex.png?2a1b3,Get 4 unique drops from Nex
+4,Asgarnia,3,,https://oldschool.runescape.wiki/images/thumb/Barronite_mace_detail.png/130px-Barronite_mace_detail.png?9bbfe,Craft a Barronite mace from scratch
+4,Asgarnia,4,,https://oldschool.runescape.wiki/images/Pegasian_crystal_detail.png?7887c,Get 3 Pegasian crystals
+4,Asgarnia,5,,https://oldschool.runescape.wiki/images/thumb/Zamorak_hilt_detail.png/1280px-Zamorak_hilt_detail.png?f52af,Get 2 unique godsword hilts
+4,Asgarnia,6,,https://oldschool.runescape.wiki/images/thumb/Eldric_the_Ice_King.png/800px-Eldric_the_Ice_King.png?6bd48,Get 10 elite clues from Royal Titans
+4,Asgarnia,7,,https://oldschool.runescape.wiki/images/thumb/Baby_Mole_%28follower%29.png/1280px-Baby_Mole_%28follower%29.png?c4d59,Get a Baby mole
+4,Asgarnia,8,,https://oldschool.runescape.wiki/images/thumb/Unidentified_minerals_detail.png/130px-Unidentified_minerals_detail.png?859ba,Mine 350 Unidentified minerals
+4,Asgarnia,9,,https://oldschool.runescape.wiki/images/Bandos_armour_equipped_female.png?ee028,Complete any GWD armor set
+5,Misthalin,1,,https://oldschool.runescape.wiki/images/thumb/Toktz-mej-tal_detail.png/150px-Toktz-mej-tal_detail.png?d863b,Get a Toktz-mej-tal
+5,Misthalin,2,,https://oldschool.runescape.wiki/images/Rune_dragon.png?90f09,Get a rare drop from adamant and rune dragons
+5,Misthalin,3,,https://oldschool.runescape.wiki/images/thumb/Scurry_detail.png/1280px-Scurry_detail.png?3f9d8,Get a Scurry
+5,Misthalin,4,,https://oldschool.runescape.wiki/images/thumb/Unsired_detail.png/1280px-Unsired_detail.png?36d00,Get 7 Unsireds
+5,Misthalin,5,,https://oldschool.runescape.wiki/images/thumb/TzKal-Zuk.png/1280px-TzKal-Zuk.png?2d222,"Clear the Fight Caves, then the Inferno, without banking"
+5,Misthalin,6,,https://oldschool.runescape.wiki/images/thumb/Bryophyta%27s_essence_detail.png/120px-Bryophyta%27s_essence_detail.png?e56c2,Get a Bryophyta's essence
+5,Misthalin,7,,https://oldschool.runescape.wiki/images/thumb/Tormented_synapse_detail.png/120px-Tormented_synapse_detail.png?27153,Get a Tormented synapse
+5,Misthalin,8,,https://oldschool.runescape.wiki/images/thumb/Unidentified_rare_fossil_detail.png/1280px-Unidentified_rare_fossil_detail.png?36d00,Get 10 Unidentified rare fossils
+5,Misthalin,9,,https://oldschool.runescape.wiki/images/thumb/Dragon_pickaxe_%28broken%29_detail.png/130px-Dragon_pickaxe_%28broken%29_detail.png?bb22e,Find a Broken dragon pickaxe
+6,Tirannwn,1,,https://oldschool.runescape.wiki/images/Fragment_of_Seren.png?34a92,"Complete ""Fragment of Seren Speed-Trialist"""
+6,Tirannwn,2,,https://oldschool.runescape.wiki/images/thumb/Zalcano.png/800px-Zalcano.png?6244d,Get any Zalcano unique
+6,Tirannwn,3,,https://oldschool.runescape.wiki/images/thumb/Elven_signet_detail.png/130px-Elven_signet_detail.png?e6a10,Get an Elven signet
+6,Tirannwn,4,,https://oldschool.runescape.wiki/images/thumb/Tanzanite_fang_detail.png/170px-Tanzanite_fang_detail.png?859ba,Get 2 Tanzanite fangs
+6,Tirannwn,5,,https://oldschool.runescape.wiki/images/thumb/Reward_Chest_%28The_Gauntlet%29.png/1280px-Reward_Chest_%28The_Gauntlet%29.png?69415,Get 6 seeds from the Gauntlet chest
+6,Tirannwn,6,,https://oldschool.runescape.wiki/images/thumb/Aquanite_tendon_detail.png/130px-Aquanite_tendon_detail.png?73e60,Get 2 Aquanite tendons
+6,Tirannwn,7,,https://oldschool.runescape.wiki/images/thumb/Gwyna%27s_fabric_roll_detail.png/130px-Gwyna%27s_fabric_roll_detail.png?3144c,Clear Gwineth Glide's Marlin rank under 5:20
+6,Tirannwn,8,,https://oldschool.runescape.wiki/images/thumb/Purplefin_detail.png/130px-Purplefin_detail.png?9272f,Catch a Purplefin
+6,Tirannwn,9,,https://oldschool.runescape.wiki/images/Enhanced_crystal_teleport_seed_detail.png?84d93,Get 4 Enhanced crystal teleport seeds
+7,Varlamore,1,,https://oldschool.runescape.wiki/images/thumb/Sol_Heredit.png/1024px-Sol_Heredit.png?91250,"Loot a Colosseum unique after defeating Sol, 3 times"
+7,Varlamore,2,,https://oldschool.runescape.wiki/images/thumb/Potion_storage_detail.png/130px-Potion_storage_detail.png?fa107,Earn enough resin to purchase 2 Potion storages
+7,Varlamore,3,,https://oldschool.runescape.wiki/images/thumb/Eye_of_ayak_detail.png/1280px-Eye_of_ayak_detail.png?0bf26,Get an Eye of Ayak
+7,Varlamore,4,,https://oldschool.runescape.wiki/images/Sunfire_fanatic_armour_equipped_male.png?7b83b,Find the Sunfire armour elite clue step
+7,Varlamore,5,,https://oldschool.runescape.wiki/images/thumb/Executioner%27s_axe_head_detail.png/1280px-Executioner%27s_axe_head_detail.png?b410d,Get an Executioner's axe head
+7,Varlamore,6,,https://oldschool.runescape.wiki/images/thumb/Lunar_Chest_%28closed%29.png/1280px-Lunar_Chest_%28closed%29.png?19bbc,Complete any Moons armour set
+7,Varlamore,7,,https://oldschool.runescape.wiki/images/thumb/Greenman_mask_detail.png/130px-Greenman_mask_detail.png?d4105,Find a Greenman's mask
+7,Varlamore,8,,https://oldschool.runescape.wiki/images/thumb/The_Hueycoatl.png/1280px-The_Hueycoatl.png?7b216,Get a Dragon hunter wand and a Tome of earth
+7,Varlamore,9,,https://oldschool.runescape.wiki/images/thumb/Hunters%27_loot_sack_%28expert%29_detail.png/130px-Hunters%27_loot_sack_%28expert%29_detail.png?8f887,Get 6 unique items from Hunters' loot sacks
+8,Fremennik,1,,https://oldschool.runescape.wiki/images/Virtus_robes_equipped_male.png?5f189,Get any Virtus piece from Duke Sucellus
+8,Fremennik,2,,https://oldschool.runescape.wiki/images/thumb/Combat_achievements_detail.png/1280px-Combat_achievements_detail.png?d8b9a,"Complete ""The Fremmenik Way"" without ever restoring prayer"
+8,Fremennik,3,,https://oldschool.runescape.wiki/images/thumb/Inky_paint_detail.png/1024px-Inky_paint_detail.png?11afa,Get an Inky paint
+8,Fremennik,4,,https://oldschool.runescape.wiki/images/thumb/Swift_marlin_detail.png/130px-Swift_marlin_detail.png?17dd6,Catch a Swift marlin
+8,Fremennik,5,,https://oldschool.runescape.wiki/images/thumb/Venator_bow_detail.png/1280px-Venator_bow_detail.png?624b1,Complete a Venator Bow from scratch
+8,Fremennik,6,,https://oldschool.runescape.wiki/images/thumb/Berserker_ring_detail.png/1280px-Berserker_ring_detail.png?81f8b,Get 15 Dagannoth King rings
+8,Fremennik,7,,https://oldschool.runescape.wiki/images/thumb/Basilisk_jaw_detail.png/150px-Basilisk_jaw_detail.png?e3794,Get a Basilisk Jaw
+8,Fremennik,8,,https://oldschool.runescape.wiki/images/thumb/Leaf-bladed_battleaxe_detail.png/1280px-Leaf-bladed_battleaxe_detail.png?d1db6,Get 2 Leaf-bladed battleaxes
+8,Fremennik,9,,https://oldschool.runescape.wiki/images/thumb/Vorkath.png/1280px-Vorkath.png?1ce3f,Get a Redwood or Celastrus seed from Vorkath
+9,Desert,1,,https://oldschool.runescape.wiki/images/thumb/Tome_of_water_detail.png/160px-Tome_of_water_detail.png?2502c,Get a Tome of water
+9,Desert,2,,https://oldschool.runescape.wiki/images/Infinity_robe_set_equipped_female.png?6f1b0,Purchase a full set of Infinity robes
+9,Desert,3,,https://oldschool.runescape.wiki/images/Chromium_ingot_detail.png?b410d,Get 3 Chromium ingots from the Leviathan
+9,Desert,4,,https://oldschool.runescape.wiki/images/thumb/Dragon_pickaxe_detail.png/140px-Dragon_pickaxe_detail.png?4f4ee,Get 2 Dragon pickaxes from the Kalphite Queen
+9,Desert,5,,https://oldschool.runescape.wiki/images/thumb/Chest_%28Tombs_of_Amascut%2C_open%29.png/1280px-Chest_%28Tombs_of_Amascut%2C_open%29.png?a0d1e,Get 6 purples in the Tombs of Amascut
+9,Desert,6,,https://oldschool.runescape.wiki/images/thumb/Abyssal_green_dye_detail.png/90px-Abyssal_green_dye_detail.png?e5674,Get 2 unique abyssal dyes
+9,Desert,7,,https://oldschool.runescape.wiki/images/thumb/The_Leviathan.png/1024px-The_Leviathan.png?d588a,Get any unique drop from Awakened Leviathan
+9,Desert,8,,https://oldschool.runescape.wiki/images/thumb/Pharaoh%27s_sceptre_detail.png/1280px-Pharaoh%27s_sceptre_detail.png?164e0,Get 2 Pharaoh's sceptres
+9,Desert,9,,https://oldschool.runescape.wiki/images/thumb/Remnant_of_kephri_detail.png/120px-Remnant_of_kephri_detail.png?9999d,"Get a 5-man Remnant of Kephri, or the 8-man GM time"
+10,Wilderness,1,,https://oldschool.runescape.wiki/images/thumb/Boss.png/150px-Boss.png?d025d,Complete the Wilderness boss gauntlet!
+10,Wilderness,2,,https://oldschool.runescape.wiki/images/thumb/Corporeal_Beast.png/1280px-Corporeal_Beast.png?52ebb,Get any sigil from the Corporeal Beast
+10,Wilderness,3,,https://oldschool.runescape.wiki/images/Pkskull_%28Steam_Emoticon%29.png?3b9e5,PK another bingo contestant for at least 1M GP
+10,Wilderness,4,,https://oldschool.runescape.wiki/images/thumb/Odium_ward_detail.png/1280px-Odium_ward_detail.png?49661,Complete any wilderness shield
+10,Wilderness,5,,https://oldschool.runescape.wiki/images/thumb/Amulet_of_eternal_glory_detail.png/800px-Amulet_of_eternal_glory_detail.png?34ecf,Get an Eternal amulet of glory
+10,Wilderness,6,,https://oldschool.runescape.wiki/images/thumb/Ancient_statuette_detail.png/800px-Ancient_statuette_detail.png?63bac,Get at least 20M worth of Ancient statuettes
+10,Wilderness,7,,https://oldschool.runescape.wiki/images/Elder_chaos_druid_robes_equipped_male.png?27e58,Complete an Elder Chaos Druid robes set
+10,Wilderness,8,,https://oldschool.runescape.wiki/images/thumb/Ursine_chainmace_%28u%29_detail.png/170px-Ursine_chainmace_%28u%29_detail.png?bb22e,"Get any revenant weapon, then upgrade it"
+10,Wilderness,9,,https://oldschool.runescape.wiki/images/thumb/Wilderness_agility_ticket_detail.png/130px-Wilderness_agility_ticket_detail.png?ef5a0,Get at least 8M GP from the Wilderness Agility course
+11,Bridges,1,,https://oldschool.runescape.wiki/images/Runecraft_cape%28t%29_detail.png?eeef1,Earn 2M Runecraft XP
+11,Bridges,2,,https://oldschool.runescape.wiki/images/thumb/Reward_casket_%28master%29_detail.png/130px-Reward_casket_%28master%29_detail.png?2271d,Get 3 unique master clue items
+11,Bridges,3,,https://oldschool.runescape.wiki/images/thumb/Slayer_helmet_detail.png/800px-Slayer_helmet_detail.png?297df,Get 3 unique slayer helm recolours
+11,Bridges,4,,https://oldschool.runescape.wiki/images/Cooking_cape%28t%29_detail.png?9a324,Earn 10M Cooking XP
+11,Bridges,5,,https://oldschool.runescape.wiki/images/Fishing_cape%28t%29_detail.png?1859f,Earn 2M Fishing XP
+11,Bridges,6,,https://oldschool.runescape.wiki/images/thumb/Barracuda_paint_detail.png/130px-Barracuda_paint_detail.png?e1677,Get the Barracuda paint
+11,Bridges,7,,https://oldschool.runescape.wiki/images/thumb/Horn_of_plenty_detail.png/1280px-Horn_of_plenty_detail.png?7918c,Get a Horn of plenty
+11,Bridges,8,,https://oldschool.runescape.wiki/images/thumb/Book_of_balance_detail.png/1280px-Book_of_balance_detail.png?eed8a,Complete any god book
+11,Bridges,9,,https://oldschool.runescape.wiki/images/Woodcut._cape%28t%29_detail.png?f52af,Earn 2M Woodcutting XP
+11,Bridges,10,,https://oldschool.runescape.wiki/images/thumb/Shield_left_half_detail.png/800px-Shield_left_half_detail.png?c8bbf,Get a Dragon spear and a Shield left half
+11,Bridges,11,,https://oldschool.runescape.wiki/images/thumb/Belle%27s_folly_detail.png/1280px-Belle%27s_folly_detail.png?d3419,Get 2 Belle's follies
+11,Bridges,12,,https://oldschool.runescape.wiki/images/thumb/Dragon_boots_detail.png/150px-Dragon_boots_detail.png?35048,Get every pair of metal boots
+11,Bridges,13,,https://oldschool.runescape.wiki/images/thumb/Torture_ornament_kit_detail.png/200px-Torture_ornament_kit_detail.png?04867,Get 4 unique ornament kits from clues
+11,Bridges,14,,https://oldschool.runescape.wiki/images/Dark_mystic_robes_equipped_female.png?1969d,Get a Mystic piece for every slot (light/dark/dusk)
+11,Bridges,15,,https://oldschool.runescape.wiki/images/Ancient_blessed_dragonhide_armour_equipped_male.png?e837a,Obtain a piece of blessed d'hide for every slot (except shield)
+11,Bridges,16,,https://oldschool.runescape.wiki/images/Mining_cape%28t%29_detail.png?76de8,Earn 2M Mining XP
+11,Bridges,17,,https://oldschool.runescape.wiki/images/thumb/Spirit_seed_detail.png/150px-Spirit_seed_detail.png?5e2ce,Get a Spirit seed as a drop (no packs or nests)
+11,Bridges,18,,https://oldschool.runescape.wiki/images/thumb/Rune_salvaging_hook_%28skiff%29.png/1280px-Rune_salvaging_hook_%28skiff%29.png?3d1e0,Get 4 salvaging treasures
+11,Bridges,19,,https://oldschool.runescape.wiki/images/Adamant_armour_%28h1%29_equipped.png?5194a,Get a heraldic piece of the same tier for every slot
+11,Bridges,20,,https://oldschool.runescape.wiki/images/Slayer_cape%28t%29_detail.png?2ab41,Earn 1.5M Slayer XP
+11,Bridges,21,,https://oldschool.runescape.wiki/images/Sailing_cape%28t%29_detail.png?d2c06,Earn 3M Sailing XP
+11,Bridges,22,,https://oldschool.runescape.wiki/images/thumb/Bottled_storm_detail.png/1024px-Bottled_storm_detail.png?6fd35,Get a Bottled storm
+11,Bridges,23,,https://oldschool.runescape.wiki/images/thumb/Big_shark_detail.png/130px-Big_shark_detail.png?e3794,Get any non-sailing big fish
+11,Bridges,24,,https://oldschool.runescape.wiki/images/Thieving_cape%28t%29_detail.png?1f96c,Earn 3M Thieving XP
