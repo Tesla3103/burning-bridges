@@ -44,7 +44,7 @@ region_id,region_name,position_id,image_url,text
 5,Misthalin,7,https://oldschool.runescape.wiki/images/thumb/Tormented_synapse_detail.png/120px-Tormented_synapse_detail.png?27153,Get a Tormented synapse
 5,Misthalin,8,https://oldschool.runescape.wiki/images/thumb/Unidentified_rare_fossil_detail.png/1280px-Unidentified_rare_fossil_detail.png?36d00,Get 10 Unidentified rare fossils
 5,Misthalin,9,https://oldschool.runescape.wiki/images/thumb/Dragon_pickaxe_%28broken%29_detail.png/130px-Dragon_pickaxe_%28broken%29_detail.png?bb22e,Find a Broken dragon pickaxe
-6,Tirannwn,1,https://oldschool.runescape.wiki/images/Fragment_of_Seren.png?34a92,"Complete ""Fragment of Seren Speed-Trialist"""
+6,Tirannwn,1,https://oldschool.runescape.wiki/images/Fragment_of_Seren.png?34a92,"Defeat the Fragment of Seren in 1:50 or under"
 6,Tirannwn,2,https://oldschool.runescape.wiki/images/thumb/Zalcano.png/800px-Zalcano.png?6244d,Get any Zalcano unique
 6,Tirannwn,3,https://oldschool.runescape.wiki/images/thumb/Elven_signet_detail.png/130px-Elven_signet_detail.png?e6a10,Get an Elven signet
 6,Tirannwn,4,https://oldschool.runescape.wiki/images/thumb/Tanzanite_fang_detail.png/170px-Tanzanite_fang_detail.png?859ba,Get 2 Tanzanite fangs
@@ -79,7 +79,7 @@ region_id,region_name,position_id,image_url,text
 9,Desert,6,https://oldschool.runescape.wiki/images/thumb/Abyssal_green_dye_detail.png/90px-Abyssal_green_dye_detail.png?e5674,Get 2 unique abyssal dyes
 9,Desert,7,https://oldschool.runescape.wiki/images/thumb/The_Leviathan.png/1024px-The_Leviathan.png?d588a,Get any unique drop from Awakened Leviathan
 9,Desert,8,https://oldschool.runescape.wiki/images/thumb/Pharaoh%27s_sceptre_detail.png/1280px-Pharaoh%27s_sceptre_detail.png?164e0,Get 2 Pharaoh's sceptres
-9,Desert,9,https://oldschool.runescape.wiki/images/thumb/Remnant_of_kephri_detail.png/120px-Remnant_of_kephri_detail.png?9999d,"Get a 5-man Remnant of Kephri, or the 8-man GM time"
+9,Desert,9,https://oldschool.runescape.wiki/images/thumb/Remnant_of_kephri_detail.png/120px-Remnant_of_kephri_detail.png?9999d,"Get a 5-man Remnant of Kephri"
 10,Wilderness,1,https://oldschool.runescape.wiki/images/thumb/Boss.png/150px-Boss.png?d025d,Complete the Wilderness boss gauntlet!
 10,Wilderness,2,https://oldschool.runescape.wiki/images/thumb/Corporeal_Beast.png/1280px-Corporeal_Beast.png?52ebb,Get any sigil from the Corporeal Beast
 10,Wilderness,3,https://oldschool.runescape.wiki/images/Pkskull_%28Steam_Emoticon%29.png?3b9e5,PK another bingo contestant for at least 1M GP
@@ -93,7 +93,7 @@ region_id,region_name,position_id,image_url,text
 11,Bridges,2,https://oldschool.runescape.wiki/images/thumb/Reward_casket_%28master%29_detail.png/130px-Reward_casket_%28master%29_detail.png?2271d,Get 3 unique master clue items
 11,Bridges,3,https://oldschool.runescape.wiki/images/thumb/Slayer_helmet_detail.png/800px-Slayer_helmet_detail.png?297df,Get 3 unique slayer helm recolours
 11,Bridges,4,https://oldschool.runescape.wiki/images/Cooking_cape%28t%29_detail.png?9a324,Earn 10M Cooking XP
-11,Bridges,5,https://oldschool.runescape.wiki/images/Fishing_cape%28t%29_detail.png?1859f,Earn 2M Fishing XP
+11,Bridges,5,https://oldschool.runescape.wiki/images/Fishing_cape%28t%29_detail.png?1859f,Earn 4M Fishing XP
 11,Bridges,6,https://oldschool.runescape.wiki/images/thumb/Barracuda_paint_detail.png/130px-Barracuda_paint_detail.png?e1677,Get the Barracuda paint
 11,Bridges,7,https://oldschool.runescape.wiki/images/thumb/Horn_of_plenty_detail.png/1280px-Horn_of_plenty_detail.png?7918c,Get a Horn of plenty
 11,Bridges,8,https://oldschool.runescape.wiki/images/thumb/Book_of_balance_detail.png/1280px-Book_of_balance_detail.png?eed8a,Complete any god book
@@ -106,10 +106,10 @@ region_id,region_name,position_id,image_url,text
 11,Bridges,15,https://oldschool.runescape.wiki/images/Ancient_blessed_dragonhide_armour_equipped_male.png?e837a,Obtain a piece of blessed d'hide for every slot (except shield)
 11,Bridges,16,https://oldschool.runescape.wiki/images/Mining_cape%28t%29_detail.png?76de8,Earn 2M Mining XP
 11,Bridges,17,https://oldschool.runescape.wiki/images/thumb/Spirit_seed_detail.png/150px-Spirit_seed_detail.png?5e2ce,Get a Spirit seed as a drop (no packs or nests)
-11,Bridges,18,https://oldschool.runescape.wiki/images/thumb/Rune_salvaging_hook_%28skiff%29.png/1280px-Rune_salvaging_hook_%28skiff%29.png?3d1e0,Get 4 salvaging treasures
+11,Bridges,18,https://oldschool.runescape.wiki/images/thumb/Rune_salvaging_hook_%28skiff%29.png/1280px-Rune_salvaging_hook_%28skiff%29.png?3d1e0,Get 4 unique salvaging treasures
 11,Bridges,19,https://oldschool.runescape.wiki/images/Adamant_armour_%28h1%29_equipped.png?5194a,Get a heraldic piece of the same tier for every slot
 11,Bridges,20,https://oldschool.runescape.wiki/images/Slayer_cape%28t%29_detail.png?2ab41,Earn 1.5M Slayer XP
 11,Bridges,21,https://oldschool.runescape.wiki/images/Sailing_cape%28t%29_detail.png?d2c06,Earn 3M Sailing XP
 11,Bridges,22,https://oldschool.runescape.wiki/images/thumb/Bottled_storm_detail.png/1024px-Bottled_storm_detail.png?6fd35,Get a Bottled storm
-11,Bridges,23,https://oldschool.runescape.wiki/images/thumb/Big_shark_detail.png/130px-Big_shark_detail.png?e3794,Get every non-sailing big fish
+11,Bridges,23,https://oldschool.runescape.wiki/images/thumb/Big_shark_detail.png/130px-Big_shark_detail.png?e3794,Get ALL non-sailing big fish
 11,Bridges,24,https://oldschool.runescape.wiki/images/Thieving_cape%28t%29_detail.png?1f96c,Earn 3M Thieving XP

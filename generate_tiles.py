@@ -379,7 +379,7 @@ def main():
 
             filename = build_filename(row["region_id"], row["region_name"], row["position_id"])
 
-            print(f"Generating row {row_index}: {filename}")
+            print(f"Generating CSV line {row_index}: {filename}")
 
             # Normal
             tile_normal = make_tile(row, completed=False)
