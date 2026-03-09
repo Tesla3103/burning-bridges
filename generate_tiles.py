@@ -5,6 +5,7 @@ import csv
 import os
 import re
 import math
+import sys
 
 # ─── CONFIG ──────────────────────────────────────────────
 CANVAS_SIZE = 200
@@ -48,6 +49,54 @@ NORMAL_COMPLETED_DIR = "tiles_normal_completed"
 
 font = ImageFont.truetype(FONT_PATH, FONT_SIZE)
 
+def parse_row_specs(args):
+    """
+    Parses command-line row specs like:
+      5
+      5 8 10
+      5-9
+      5 8-10 14
+
+    Returns:
+      None if no args were provided (meaning: process all rows)
+      otherwise a set of 1-based data row numbers to process
+    """
+    if not args:
+        return None
+
+    selected = set()
+
+    for arg in args:
+        arg = arg.strip()
+
+        if "-" in arg:
+            parts = arg.split("-", 1)
+            if len(parts) != 2:
+                raise ValueError(f"Invalid row range: {arg}")
+
+            start = int(parts[0])
+            end = int(parts[1])
+
+            if start <= 0 or end <= 0:
+                raise ValueError(f"Row numbers must be >= 1: {arg}")
+
+            if start > end:
+                raise ValueError(f"Range start must be <= end: {arg}")
+
+            selected.update(range(start, end + 1))
+        else:
+            row_num = int(arg)
+            if row_num <= 0:
+                raise ValueError(f"Row numbers must be >= 1: {arg}")
+            selected.add(row_num)
+
+    return selected
+
+def should_process_row(row_index, selected_rows):
+    """
+    row_index is 1-based among data rows (header excluded).
+    """
+    return selected_rows is None or row_index in selected_rows
 
 def ensure_dir(path: str):
     os.makedirs(path, exist_ok=True)
@@ -299,9 +348,20 @@ def save_completed_variant(
 
 def main():
     checkmark = load_checkmark()
-
-    # NEW: preload modifier icons once (faster + cleaner)
     modifier_icons = load_modifier_icons(MODIFIER_BORDER_COLORS.keys())
+
+    # Optional CLI row filter
+    try:
+        selected_rows = parse_row_specs(sys.argv[1:])
+    except ValueError as e:
+        print(f"❌ {e}")
+        print("Usage examples:")
+        print("  python generate_tiles.py")
+        print("  python generate_tiles.py 12")
+        print("  python generate_tiles.py 12 15 18")
+        print("  python generate_tiles.py 12-20")
+        print("  python generate_tiles.py 12 15-18 24")
+        return
 
     with open("tiles.csv", newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
@@ -311,28 +371,41 @@ def main():
         if missing:
             raise ValueError(f"tiles.csv missing columns: {sorted(missing)}")
 
-        for row in reader:
+        processed_count = 0
+
+        for row_index, row in enumerate(reader, start=2):
+            if not should_process_row(row_index, selected_rows):
+                continue
+
             filename = build_filename(row["region_id"], row["region_name"], row["position_id"])
 
-            # Normal (no modifier border/icon, black background)
+            print(f"Generating row {row_index}: {filename}")
+
+            # Normal
             tile_normal = make_tile(row, completed=False)
             save_variant(tile_normal, filename, NORMAL_DIR)
 
-            # Normal completed (green background + checkmark)
+            # Normal completed
             tile_completed = make_tile(row, completed=True)
             save_completed_variant(tile_completed, filename, NORMAL_COMPLETED_DIR, checkmark)
 
-            # All modifier variants (modifier controls BORDER + icon)
+            # All modifier variants
             for mod, border_color in MODIFIER_BORDER_COLORS.items():
                 mod_dir = f"tiles_{mod}"
                 mod_completed_dir = f"tiles_{mod}_completed"
-                mod_icon = modifier_icons.get(mod)  # may be None if missing
+                mod_icon = modifier_icons.get(mod)
 
-                # Modified (black background + colored border + modifier icon)
+                # Modified
                 t_mod = make_tile(row, completed=False)
-                save_variant(t_mod, filename, mod_dir, border_color=border_color, modifier_icon=mod_icon)
+                save_variant(
+                    t_mod,
+                    filename,
+                    mod_dir,
+                    border_color=border_color,
+                    modifier_icon=mod_icon
+                )
 
-                # Modified + completed (green background + border + modifier icon + checkmark on top)
+                # Modified + completed
                 t_mod_completed = make_tile(row, completed=True)
                 save_completed_variant(
                     t_mod_completed,
@@ -343,7 +416,12 @@ def main():
                     modifier_icon=mod_icon
                 )
 
-    print("✅ Done. Modifiers => colored border + bottom-right icon. Completion => green background + top-left checkmark.")
+            processed_count += 1
+
+    if selected_rows is None:
+        print(f"✅ Done. Generated all rows ({processed_count} processed).")
+    else:
+        print(f"✅ Done. Generated selected rows only ({processed_count} processed).")
 
 
 if __name__ == "__main__":
