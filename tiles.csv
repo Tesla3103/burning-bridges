@@ -1,6 +1,11 @@
 region_id,region_name,position_id,image_url,text
+<<<<<<< HEAD
 1,Kandarin,1,https://oldschool.runescape.wiki/images/thumb/Jar_of_dirt_detail.png/800px-Jar_of_dirt_detail.png?7bdc6,Get 5 Jars of dirt
 1,Kandarin,2,https://oldschool.runescape.wiki/images/Zenyte_shard_detail.png?c5a63,Get 14 Zenyte shards
+=======
+1,Kandarin,1,https://oldschool.runescape.wiki/images/thumb/Jar_of_dirt_detail.png/800px-Jar_of_dirt_detail.png?7bdc6,Get 2 Jars of dirt
+1,Kandarin,2,https://oldschool.runescape.wiki/images/Zenyte_shard_detail.png?c5a63,Get 5 Zenyte shards
+>>>>>>> parent of 6e509da (Awaken Zenytes)
 1,Kandarin,3,https://oldschool.runescape.wiki/images/thumb/Shaman_mask_detail.png/1280px-Shaman_mask_detail.png?c8823,Get a Shaman Mask
 1,Kandarin,4,https://oldschool.runescape.wiki/images/Smoke_Devil_%28follower%29.png?3e74f,Get a Pet smoke devil
 1,Kandarin,5,https://oldschool.runescape.wiki/images/thumb/Dragon_full_helm_detail.png/1280px-Dragon_full_helm_detail.png?6edab,Get a Dragon full helm... or 200 Chewed bones while trying!
